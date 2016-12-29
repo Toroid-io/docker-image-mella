@@ -1,0 +1,6 @@
+pipeline:
+  docker:
+    image: plugins/docker
+    repo: toroid/mella
+    tags:
+      - latest
