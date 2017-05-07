@@ -4,3 +4,14 @@ pipeline:
     repo: toroid/mella
     tags:
       - latest
+
+  notify:
+    image: plugins/downstream
+    server: https://bianca.toroid.io
+    repositories:
+      - Toroid-io/drone-mella
+    tags: latest
+    when:
+      event: push
+      status: success
+      branch: master
